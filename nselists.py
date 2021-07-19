@@ -17,7 +17,7 @@ def stock_details(stock):
             dayHigh = data['dayHigh']
             low52 = data['low52']
             high52 = data['high52']
-            stock_depth_details = 'lastPrice :{} change :{} dayHigh : {} low52 : {}  high52 : {} '.format(lastPrice,change,dayHigh,low52,high52)
+            stock_depth_details = 'lastPrice :{} \n change :{}  \n dayHigh : {} \n low52 : {} \n high52 : {} '.format(lastPrice,change,dayHigh,low52,high52)
             print('lastPrice :{} change :{} dayHigh : {} low52 : {}  high52 : {} '.format(lastPrice,change,dayHigh,low52,high52))
             return stock_depth_details
         else:
@@ -26,7 +26,7 @@ def stock_details(stock):
     except :
         return 'Not able to filter'
 
-stock_details('ESAB INDIA LTD')
+#stock_details('ESAB INDIA LTD')
 
 
 

@@ -19,6 +19,6 @@ def send_message(text):
     params = urllib.parse.urlencode(payload, quote_via=urllib.parse.quote)
     url = URL + "sendMessage"
     response = requests.get(url, params=params)
-    print(response)
+    #print(response)
     #get_url(url)
 

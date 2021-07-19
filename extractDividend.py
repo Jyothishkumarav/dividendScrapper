@@ -21,13 +21,11 @@ def print_data_dup(obj):
 def send_stock_date(obj):
     for record in obj:
         c, e, a = record.values()
-        text_sample = "{:<50} {:<12} {:<8}".format(c, str(e), a)
+        text_sample = "Stock : {} \nEx Date : {} \nAmount : {} \n ".format(c, str(e), a)
         print(text_sample)
         stock_detail = stock_details(c)
-        text_sample_telegram_Msg  = text_sample + ' ---- ' +stock_detail
+        text_sample_telegram_Msg  = text_sample + '\n' +stock_detail
         send_message(text_sample_telegram_Msg)
-
-        print()
 
 
 def filter_stocks(obj, amount):
@@ -70,5 +68,8 @@ for result in results:
 
 driver.quit()
 #filter_dict = filter_stocks(div_list, 10.0)
-filter_amount_date = filter_stocks_wit_date(div_list, 10.0, '22 Aug 2021')
+today = datetime.datetime.today()
+onemonth = today + datetime.timedelta(30)
+onemonth_txt = onemonth.strftime('%d %b %Y')
+filter_amount_date = filter_stocks_wit_date(div_list, 10.0, onemonth_txt)
 send_stock_date(filter_amount_date)
