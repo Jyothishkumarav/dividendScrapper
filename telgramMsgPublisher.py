@@ -3,7 +3,7 @@ import urllib
 
 import requests
 
-telgramToken = '1912863077:AAGH-iVztSPAw5K117Us-GKEx9pj-j3GUzw'
+telgramToken = ''
 telefframDividendChatId = '-586722077'
 URL = "https://api.telegram.org/bot{}/".format(telgramToken)
 
